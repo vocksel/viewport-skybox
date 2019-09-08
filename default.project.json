@@ -1,5 +1,5 @@
 {
-	"name": "viewport-skybox",
+	"name": "ViewportSkybox",
 	"tree": {
 		"$className": "DataModel",
 
@@ -12,7 +12,7 @@
 
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
-			"Skybox": {
+			"ViewportSkybox": {
 				"$path": "lib"
 			}
 		}
