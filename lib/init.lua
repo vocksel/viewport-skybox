@@ -5,14 +5,11 @@
 	https://devforum.roblox.com/t/3dskybox-a-way-to-create-more-immersive-skyboxes-for-your-game/208760
 ]]
 
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 
-local import = require(ReplicatedStorage.lib.import)
-
-local Dumpster = import("lib/Dumpster")
-local Roact = import("lib/Roact")
-local t = import("lib/t")
+local Roact = require(script.Parent.Roact)
+local Dumpster = require(script.Dumpster)
+local t = require(script.t)
 
 local camera = workspace.CurrentCamera
 
