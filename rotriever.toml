@@ -1,0 +1,4 @@
+name = "Skybox"
+author = "David Minnerly"
+content_root = "src"
+version = "0.1.0"

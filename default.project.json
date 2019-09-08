@@ -1,0 +1,20 @@
+{
+	"name": "viewport-skybox",
+	"tree": {
+		"$className": "DataModel",
+
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		},
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Skybox": {
+				"$path": "lib"
+			}
+		}
+	}
+}
