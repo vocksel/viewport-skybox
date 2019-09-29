@@ -16,13 +16,14 @@ local camera = workspace.CurrentCamera
 local Skybox = Roact.Component:extend("Skybox")
 
 Skybox.validateProps = t.interface({
-	content = t.Instance,
+	content = t.instanceOf("Model"),
 
 	-- The distance where the skybox gui plane is. It’s best to have this quite
 	-- big so it doesn’t clip with anything in the workspace.
 	distance = t.optional(t.number),
 
-	-- The origin for the camera used by the skybox.
+	-- The origin for the camera used by the skybox. This defaults to the
+	-- position of content's PrimaryPart.
 	origin = t.optional(t.Vector3),
 
 	-- This allows the skybox to 'move' relative to the player.
@@ -41,7 +42,6 @@ Skybox.validateProps = t.interface({
 
 Skybox.defaultProps = {
 	distance = 10000,
-	origin = Vector3.new(0, 0, 0),
 	allowMovement = true,
 	movementScale = 2500,
 	Ambience = Color3.fromRGB(200, 200, 200),
@@ -50,6 +50,8 @@ Skybox.defaultProps = {
 }
 
 function Skybox:init()
+	assert(self.props.content.PrimaryPart, "the `content` prop must have a PrimaryPart")
+
 	self.viewportRef = Roact.createRef()
 	self.cameraRef = Roact.createRef()
 	self.adorneeRef = Roact.createRef()
@@ -99,9 +101,12 @@ function Skybox:render()
 end
 
 function Skybox:didMount()
+
 	local content = self.props.content:Clone()
 	content.Parent = self.viewportRef.current
 	self.dumpster:dump(content)
+
+	local origin = self.props.origin or content.PrimaryPart.Position
 
 	self.dumpster:dump(camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
 		self.updateSkyboxSize(camera.ViewportSize)
@@ -111,7 +116,7 @@ function Skybox:didMount()
 		local camPos = self.props.origin
 
 		if self.props.allowMovement then
-			camPos = self.props.origin + (camera.CFrame.Position / self.props.movementScale)
+			camPos = origin + (camera.CFrame.Position / self.props.movementScale)
 		end
 
 		self.updateAdorneeCFrame(camera.CFrame * CFrame.new(0, 0, -self.props.distance))
