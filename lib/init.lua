@@ -43,7 +43,7 @@ Skybox.validateProps = t.interface({
 Skybox.defaultProps = {
 	distance = 10000,
 	allowMovement = true,
-	movementScale = 2500,
+	movementScale = 1000,
 	Ambience = Color3.fromRGB(200, 200, 200),
 	LightColor = Color3.fromRGB(140, 140, 140),
 	LightDirection = Vector3.new(-1, -1, -1),
@@ -101,7 +101,6 @@ function Skybox:render()
 end
 
 function Skybox:didMount()
-
 	local content = self.props.content:Clone()
 	content.Parent = self.viewportRef.current
 	self.dumpster:dump(content)
@@ -113,7 +112,7 @@ function Skybox:didMount()
 	end))
 
 	self.dumpster:dump(RunService.RenderStepped:Connect(function()
-		local camPos = self.props.origin
+		local camPos = origin
 
 		if self.props.allowMovement then
 			camPos = origin + (camera.CFrame.Position / self.props.movementScale)
