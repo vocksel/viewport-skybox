@@ -32,7 +32,6 @@ local Dumpster = {} do
 
 	function Dumpster:burn()
 		for item, finalizer in pairs(self) do
-			print("destroying", item)
 			finalizer(item)
 			self[item] = nil
 		end
