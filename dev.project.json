@@ -1,0 +1,11 @@
+{
+	"name": "ViewportSkybox",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"ViewportSkybox": {
+				"$path": "lib"
+			}
+		}
+	}
+}
