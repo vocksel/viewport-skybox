@@ -33,6 +33,12 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 10
     steps:
+      - name: Check for ROBLOSECURITY token
+        if: ${{ secrets.ROBLOSECURITY == "" }}
+        run: |
+          echo "ROBLOSECURITY secret must be set on the repo for tests to run"
+          exit 1
+
       - name: Checkout
         uses: actions/checkout@v2
 
