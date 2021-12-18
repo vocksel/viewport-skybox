@@ -32,15 +32,7 @@ jobs:
   tests:
     runs-on: windows-latest
     timeout-minutes: 10
-    env:
-      ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
     steps:
-      - name: Check for ROBLOSECURITY token
-        if: ${{ env.ROBLOSECURITY }} == ""
-        run: |
-            echo "ROBLOSECURITY secret must be set on the repo for tests to run"
-            exit 1
-
       - name: Checkout
         uses: actions/checkout@v2
 
