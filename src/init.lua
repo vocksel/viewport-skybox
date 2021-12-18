@@ -70,7 +70,7 @@ function Skybox:render()
 		ResetOnSpawn = false,
 		Size = self.skyboxSize:map(function(viewportSize)
 			return UDim2.new(0, viewportSize.X, 0, viewportSize.Y)
-		end)
+		end),
 	}, {
 		Viewport = Roact.createElement("ViewportFrame", {
 			Ambient = self.props.Ambient,

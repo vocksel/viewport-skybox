@@ -1,6 +1,6 @@
 {
-	"name": "ViewportSkybox",
-	"tree": {
-		"$path": "lib"
-	}
+  "name": "ViewportSkybox",
+  "tree": {
+    "$path": "src"
+  }
 }
