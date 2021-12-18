@@ -1,4 +1,5 @@
 [tools]
 rojo = { source = "rojo-rbx/rojo", version = "7.0.0" }
+run-in-roblox = { source = "rojo-rbx/run-in-roblox", version = "0.3.0" }
 selene = { source = "kampfkarren/selene", version = "0.14.0" }
 stylua = { source = "JohnnyMorganz/StyLua", version = "0.11.0" }
