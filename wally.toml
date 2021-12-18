@@ -1,0 +1,11 @@
+[package]
+name = "vocksel/viewport-skybox"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+authors = [
+    "David Minnerly <me@vocksel.com>"
+]
+exclude = [
+    "*.spec.lua"
+]
