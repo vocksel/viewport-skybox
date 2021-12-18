@@ -6,4 +6,6 @@
 roblox.toml
 
 # Wally
-wally.lock
+/Packages
+/DevPackages
+/wally.lock

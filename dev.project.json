@@ -3,6 +3,9 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
+      "DevPackages": {
+        "$path": "DevPackages"
+      },
       "ViewportSkybox": {
         "$path": "src"
       }
