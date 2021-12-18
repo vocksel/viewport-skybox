@@ -36,7 +36,7 @@ jobs:
       ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
     steps:
       - name: Check for ROBLOSECURITY token
-        if: ${{ env.ROBLOSECURITY == "" }}
+        if: ${{ env.ROBLOSECURITY }} == ""
         run: |
             echo "ROBLOSECURITY secret must be set on the repo for tests to run"
             exit 1
