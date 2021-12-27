@@ -3,11 +3,11 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "DevPackages": {
-        "$path": "DevPackages"
-      },
-      "ViewportSkybox": {
-        "$path": "src"
+      "Packages": {
+        "$path": "Packages",
+        "ViewportSkybox": {
+          "$path": "src"
+        }
       }
     },
     "ServerScriptService": {
