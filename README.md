@@ -12,12 +12,12 @@ Add the following to your `wally.toml`:
 
 ```
 [dependencies]
-ViewportSkybox = "vocksel/viewport-skybox@v1.0.0
+ViewportSkybox = "vocksel/viewport-skybox@0.1.1"
 ```
 
 ### Model File
 
-* Download a copy of the rbxm from the [releases page](https://github.com/vocksel/viewport-skybox/releases/latest) under the Assets section. 
+* Download a copy of the rbxm from the [releases page](https://github.com/vocksel/viewport-skybox/releases/latest) under the Assets section.
 * Drag and drop the file into Roblox Studio to add it to your experience.
 
 ## Usage
