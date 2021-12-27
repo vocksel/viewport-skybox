@@ -8,8 +8,8 @@
 local RunService = game:GetService("RunService")
 
 local Roact = require(script.Parent.Roact)
+local t = require(script.Parent.t)
 local Dumpster = require(script.Dumpster)
-local t = require(script.t)
 
 local camera = workspace.CurrentCamera
 

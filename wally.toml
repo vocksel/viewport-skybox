@@ -11,4 +11,6 @@ exclude = [
 ]
 
 [dependencies]
+Roact = "roblox/roact@1.4.2"
+t = "osyrisrblx/t@3.0.0"
 TestEZ = "roblox/testez@0.4.1"
