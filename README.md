@@ -12,7 +12,7 @@ Add the following to your `wally.toml`:
 
 ```
 [dependencies]
-ViewportSkybox = "vocksel/viewport-skybox@0.1.2"
+ViewportSkybox = "vocksel/viewport-skybox@0.1.3"
 ```
 
 ### Model File
