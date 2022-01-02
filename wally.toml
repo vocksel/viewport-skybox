@@ -1,5 +1,6 @@
 [package]
 name = "vocksel/viewport-skybox"
+description = "Roact-based 3D skyboxes"
 version = "0.1.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
